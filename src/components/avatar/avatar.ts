@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the AvatarComponent component.
@@ -7,15 +7,16 @@ import { Component } from '@angular/core';
  * for more info on Angular Components.
  */
 @Component({
-  selector: 'avatar',
+  selector: 'Avatar',
   templateUrl: 'avatar.html'
 })
 export class AvatarComponent {
 
-  image: string;
+  @Input('image') image: string;
+  @Input('name') name: string;
+  @Input('status') status: string;
 
   constructor() {
-    this.image = 'https://www.tusexosentido.com/wp-content/uploads/2017/04/avatar-default.png';
   }
 
 }
